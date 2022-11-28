@@ -7,6 +7,10 @@ import { galleryItems } from './gallery-items';
 const gallery = document.querySelector(".gallery");
 const imagesMarkup = createGalleryMarkup(galleryItems);
 
+gallery.addEventListener('click', (e) => {
+  e.preventDefault();
+})
+
 gallery.insertAdjacentHTML('beforeend', imagesMarkup);
 
 function createGalleryMarkup(galleryItems) {
